@@ -41,6 +41,7 @@ namespace CardGames.GameLogic
 			//Creates a timer for the game - needs to be started in constructor
 			//_gameTimer = SwinGame.CreateTimer();
 			_gameTimer = SwinGame.CreateTimer();
+			SwinGame.LoadSoundEffectNamed("Slap", "slap.wav");
 		}
 
 		/// <summary>
@@ -157,6 +158,8 @@ namespace CardGames.GameLogic
 			{
 				_score[player]++;
 				//TODO: consider playing a sound here...
+				SwinGame.PlaySoundEffect("Slap");
+				
 			}
 
             else if (player >= 0 && player < _score.Length)
