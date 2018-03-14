@@ -24,9 +24,11 @@ namespace CardGames
 			//Fetch the next batch of UI interaction
 			SwinGame.ProcessEvents();
 
+			//Starts game on space-bar keypress
 			if (SwinGame.KeyTyped (KeyCode.vk_SPACE))
 			{
 				myGame.Start();
+				//myGame.Start();
 			}
 
 
